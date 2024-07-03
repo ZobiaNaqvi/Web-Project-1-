@@ -1,0 +1,64 @@
+body {
+  margin: 0; /* Remove default body margin */
+  display: flex; /* Set body to flex container */
+  justify-content: center; /* Center elements horizontally */
+  align-items: center; /* Center elements vertically */
+  min-height: 100vh; /* Set minimum height for viewport */
+}
+
+#container {
+  /* Additional styles for your container (optional) */
+}
+
+.my-button {
+  /* Your existing button styles */
+}
+
+body {
+    background-image: url('wallpaper.jpg');
+    background-size: cover; /* Scales image to fill the entire viewport */
+    background-position: center; /* Positions image in the center */
+    background-repeat: no-repeat; /* Prevents image from repeating */
+}
+
+/* Base styles for buttons */
+button {
+    display: inline-block; /* Allow setting width and height */
+    padding: 10px 20px; /* Inner spacing */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Indicate clickable element */
+    transition: all 0.2s ease-in-out; /* Smooth hover effect */
+  }
+  
+  /* Button with solid background color */
+  button.primary {
+    background-color: #4CAF50; /* Green color */
+    color: white; /* White text */
+  }
+  
+  button.primary:hover {
+    background-color: #3e8e41; /* Darker green on hover */
+  }
+  
+  /* Button with outlined border */
+  button.outline {
+    border: 2px solid #ccc; /* Gray border */
+    color: #333; /* Dark text */
+  }
+  
+  button.outline:hover {
+    background-color: #eee; /* Light gray background on hover */
+  }
+  
+  /* Button with gradient background */
+  button.gradient {
+    background-image: linear-gradient(to right, #f77737, #ffaa4c); /* Orange gradient */
+    color: white; /* White text */
+  }
+  
+  button.gradient:hover {
+    background-image: linear-gradient(to right, #ff9848, #ffcc69); /* Lighter orange gradient on hover */
+  }
+  

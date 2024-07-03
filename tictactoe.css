@@ -1,0 +1,24 @@
+body{
+display: flex;
+justify-content: center;
+align-items: center;    
+min-height: 100vh;/*Optional: Set minimum height for full viewport*/
+}
+
+
+.box {
+  background-color: #f4dada;  /* Light background color */
+  border-radius: 10px;        /* Rounded corners */
+border: 2px solid red; /*Add a red border*/
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 20px;             /* Spacing around content */
+  margin: 4px auto;         /* Center the box */
+  width: 100px;          /* Set the width */
+  height: 100px;         /* Set the height*/
+  font-family: sans-serif;   /* Modern font */
+}
+
+.row {
+
+}
+
