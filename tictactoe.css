@@ -8,11 +8,10 @@ body {
 .box {
   display: flex;
   background-color: #c7eaf7; /* Light background color */
-  border: 2px solid rgb(7, 0, 101); /*Add a red border*/
+  border: 2px solid rgb(7, 0, 101); /*Add a blue border*/
   margin: 4px auto; /* Center the box */
   width: 150px; /* Set the width */
   height: 150px; /* Set the height*/
-  font-family: sans-serif; /* Modern font */
 }
 
 .row {
