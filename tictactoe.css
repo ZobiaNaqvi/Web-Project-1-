@@ -1,8 +1,56 @@
 body {
+ 
+  body {
+    font-family: 'Poppins', sans-serif; /* Use Poppins font for the body */
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    display: flex; /* Arrange elements horizontally */
+    justify-content: space-between; /* Space items evenly */
+    align-items: center; /* Align vertically */
+    padding: 1rem 2rem; /* Add some padding */
+    background-color: #f0f0f0; /* Light background color */
+  }
+  
+  h1 {
+    font-size: 1.5rem; /* Adjust heading size */
+    font-weight: 500; /* Set font weight for boldness */
+  }
+  
+  nav {
+    display: flex; /* Arrange navigation links horizontally */
+    list-style: none; /* Remove default bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+  }
+  
+  nav li {
+    margin-right: 1rem; /* Add space between navigation items */
+  }
+  
+  nav a {
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Set link color */
+    font-weight: 400; /* Adjust link font weight */
+  }
+  
+  nav a:hover {
+    color: #000; /* Change link color on hover */
+  }
+  
+  main {
+    padding: 1rem 2rem; /* Add padding to main content area */
+  }
+  
+  background-color: rgba(5, 1, 82, 0.99);
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh; /*Optional: Set minimum height for full viewport*/
+
+
 }
 
 .box {
@@ -14,5 +62,3 @@ body {
   height: 150px; /* Set the height*/
 }
 
-.row {
-}
