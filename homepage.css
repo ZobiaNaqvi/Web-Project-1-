@@ -1,25 +1,66 @@
 body {
-  margin: 0; /* Remove default body margin */
-  display: flex; /* Set body to flex container */
-  justify-content: center; /* Center elements horizontally */
-  align-items: center; /* Center elements vertically */
-  min-height: 100vh; /* Set minimum height for viewport */
+
+  background-image: url("wallpaper.jpg");  /* Replace with your image path */
+  background-repeat: no-repeat;  /* Optional: Controls how the image repeats */
+  background-size: cover;         /* Optional: Controls how the image fills the background */
+  background-position: center;    /* Optional: Controls the position of the image */
 }
 
-#container {
-  /* Additional styles for your container (optional) */
+
+.header {
+  display: flex; /* Makes header and navigation elements sit side-by-side */
+  justify-content: space-between; /* Spreads navigation links to the sides */
+  align-items: center; /* Aligns content vertically */
+  padding: 1rem 2rem; /* Adds padding for spacing */
+  background-color: #f0f0f0; /* Sets a light gray background */
+  font-family: "Montserrat", sans-serif; /* Primary font */
 }
 
-.my-button {
-  /* Your existing button styles */
+/* Fallback font for browsers that don't support "Montserrat" */
+@font-face {
+  font-family: "Montserrat";
+  src: url("fonts/Montserrat-Regular.woff2") format("woff2"),
+       url("fonts/Montserrat-Regular.woff") format("woff");
 }
 
-body {
-    background-image: url('wallpaper.jpg');
-    background-size: cover; /* Scales image to fill the entire viewport */
-    background-position: center; /* Positions image in the center */
-    background-repeat: no-repeat; /* Prevents image from repeating */
+.header h1 {
+  font-size: 1.5rem; /* Adjusts heading font size */
+  margin: 0; /* Removes default margin */
 }
+
+.header nav ul {
+  list-style: none; /* Removes default list style (bullets) */
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
+}
+
+.header nav li {
+  display: inline-block; /* Makes list items behave like inline elements */
+  margin-right: 1rem; /* Adds margin between links */
+}
+
+.header nav a {
+  text-decoration: none; /* Removes underline from links */
+  color: #333; /* Sets link text color */
+  font-weight: bold; /* Makes links bolder */
+}
+
+.header nav a:hover {
+  color: #000; /* Changes link color on hover */
+}
+
+.boxcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;  /* Optional: Set minimum height for full viewport */
+}
+
+
+.my-button {  /* Replace with your button's class or ID */
+  /* Existing button styles */
+}
+
 
 /* Base styles for buttons */
 button {

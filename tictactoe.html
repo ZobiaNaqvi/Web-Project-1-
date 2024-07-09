@@ -6,26 +6,13 @@
     <title>Tic-Tac-Toe</title>
     <link rel="stylesheet" href="tictactoe.css" />
     <link rel="icon" href="tic-tac-toe_566294.png" />
-  </head>
+  </head> 
   <body>
+     
+    <div class="game-title">Tic-Tac-Toe</div>
+    <div class="grid"
 
-    <header>
-      <h1>Your Website Name</h1> <nav>
-        <ul>
-          <li><a href="tictactoe.html">Tic Tac Toe</a></li>
-          <li><a href="index.html">Home</a></li> <li><a href="portfolio.html">Portfolio</a></li>
-        </ul>
-      </nav>
-    </header>
-  
-    <main>
-      <?php 
-        // Use PHP or a templating engine to include content based on the URL
-        $page = isset($_GET['page']) ? $_GET['page'] : 'tictactoe'; // Get the page name from the URL (optional)
-        include($page . '.html'); // Include the corresponding HTML file for the page
-      ?>
-    </main>
-    
+
     <div class="row">
       <div class="box" id="1"></div>
       <div class="box" id="2"></div>
