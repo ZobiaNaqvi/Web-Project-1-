@@ -1,22 +1,75 @@
 body {
- 
-
-  
   background-color: rgba(5, 1, 82, 0.99);
+}
+.grid {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /*Optional: Set minimum height for full viewport*/
+}
 
-
+.game-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px 20px;
+  background-image: linear-gradient(to margin-bottom, #0a0149, #a094e6);
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 5px;
 }
 
 .box {
   display: flex;
   background-color: #c7eaf7; /* Light background color */
   border: 2px solid rgb(7, 0, 101); /*Add a blue border*/
-  margin: 4px auto; /* Center the box */
-  width: 150px; /* Set the width */
-  height: 150px; /* Set the height*/
+  width: 100px; /* Set the width */
+  height: 100px; /* Set the height*/
 }
 
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+/* Target the reset button with its ID */
+.reset-button {
+  /* Basic styles */
+  background-color: #390e44; /* Adjust color to your preference */
+  color: white;
+  padding: 10px 20px; /* Adjust padding for desired size */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Add rounded corners */
+  cursor: pointer; /* Indicate clickable element */
+  align-items: center;
+
+  /* Hover effect (optional) */
+  transition: background-color 0.2s ease-in-out; /* Smooth transition */
+
+  &:hover {
+    background-color: #2980b9; /* Darken on hover */
+  }
+}
+
+.button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#currentplayertext {
+  /* Basic styles */
+  font-size: 2em; /* Increase text size for emphasis */
+  text-align: center; /* Center the text within its container */
+  margin-bottom: 10px; /* Add some space below the text */
+  font-size: medium;
+  font-weight: lighter;
+
+  /* Choose a color based on the current player (optional) */
+  color: #c7eaf7; /* Example for Player X (adjust based on logic) */
+
+  /* Optional: Add a subtle shadow */
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}

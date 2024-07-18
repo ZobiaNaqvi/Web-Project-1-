@@ -1,5 +1,5 @@
-const boxeslist = [0, 0, 0, 0, 0, 0, 0, 0, 0]; // Array to track game board state (0: empty, 1: Player 1, 2: Player 2)
-let playerturn = 1;  // Current player (1: Player 1, 2: Player 2)
+boxeslist = [0, 0, 0, 0, 0, 0, 0, 0, 0]; // Array to track game board state (0: empty, 1: Player 1, 2: Player 2)
+let playerturn = 1; // Current player (1: Player 1, 2: Player 2)
 
 // Winning conditions (all possible combinations)
 const winConditions = [
@@ -10,19 +10,21 @@ const winConditions = [
   [1, 4, 7],
   [2, 5, 8],
   [0, 4, 8],
-  [2, 4, 6]
+  [2, 4, 6],
 ];
 
 // Player indicator (optional, can be implemented with UI elements)
 function displayPlayerTurn() {
   // Update UI element (e.g., text) to show current player
-  console.log(`Player ${playerturn}'s turn`); // Placeholder for now
+
+  textelement = document.getElementById("currentplayertext");
+  textelement.innerHTML = "Current Player: " + playerturn;
 }
 
 // Stopping the game when it ends
 function stopGame() {
   // Disable click events on boxes to prevent further moves
-  boxes.forEach(box => box.removeEventListener('click', handleClick));
+  boxes.forEach((box) => box.removeEventListener("click", handleClick));
   console.log("Game Over!"); // Placeholder for now (e.g., display a message)
 }
 
@@ -31,9 +33,14 @@ function checkForWin() {
   for (let i = 0; i < winConditions.length; i++) {
     const condition = winConditions[i];
     const [a, b, c] = condition;
-    if (boxeslist[a] === boxeslist[b] && boxeslist[b] === boxeslist[c] && boxeslist[a] !== 0) {
+    if (
+      boxeslist[a] === boxeslist[b] &&
+      boxeslist[b] === boxeslist[c] &&
+      boxeslist[a] !== 0
+    ) {
       stopGame();
-      console.log(`Player ${boxeslist[a]} Wins!`); // Display winner message
+      textelement = document.getElementById("currentplayertext");
+      textelement.innerHTML = "Player " + playerturn + " wins!!!";
       return true; // Indicate a winner has been found
     }
   }
@@ -41,7 +48,9 @@ function checkForWin() {
   // Check for a tie (all cells filled but no winner)
   if (!boxeslist.includes(0)) {
     stopGame();
-    console.log("It's a Tie!"); // Display tie message
+    textelement = document.getElementById("currentplayertext");
+    textelement.innerHTML = "It's a Tie!";
+
     return true;
   }
 
@@ -53,8 +62,9 @@ function handleClick(event) {
   const box = event.currentTarget;
   const boxIndex = parseInt(box.id) - 1; // Convert box ID to index
 
-  if (boxeslist[boxIndex] === 0) { // Check if box is empty
-    boxeslist[boxIndex] = playerturn;  // Update game board state
+  if (boxeslist[boxIndex] === 0) {
+    // Check if box is empty
+    boxeslist[boxIndex] = playerturn; // Update game board state
 
     // Add appropriate image based on player turn
     const image = document.createElement("img");
@@ -68,7 +78,7 @@ function handleClick(event) {
       displayPlayerTurn();
     }
   } else {
-    console.log("Box already occupied!");  // Optional message for invalid clicks
+    console.log("Box already occupied!"); // Optional message for invalid clicks
   }
 }
 
@@ -77,8 +87,21 @@ function switchingTurn() {
   playerturn = playerturn === 1 ? 2 : 1;
 }
 
+button = document.getElementById("resetbutton");
+
+button.addEventListener("click", function () {
+  boxeslist = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+  playerturn = 1;
+  boxes.forEach(removeImage);
+  displayPlayerTurn();
+  boxes.forEach((box) => box.addEventListener("click", handleClick));
+});
+function removeImage(eachbox) {
+  eachbox.innerHTML = "";
+}
+
 // Add click event listeners to boxes
 const boxes = document.querySelectorAll(".box");
-boxes.forEach(box => box.addEventListener('click', handleClick));
+boxes.forEach((box) => box.addEventListener("click", handleClick));
 
 displayPlayerTurn(); // Display initial player turn (optional)

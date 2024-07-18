@@ -1,0 +1,62 @@
+body {
+    background-color: rgba(152, 110, 131, 0.682);
+}
+
+
+.profile {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.
+.profile-picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px auto; /* Add some margin for spacing */
+}
+
+
+
+.profile-picture img {
+  width: 150px; /* Adjust width as desired */
+  height: 150px; /* Adjust height as desired */
+  border-radius: 50%; /* Crop to a circle */
+  object-fit: cover; /* Ensure image fills the entire circle */
+}
+
+/* Modern Font Styling */
+
+.profile-name,
+.profile-disc {
+  font-family: sans-serif;  /* Fallback font for modern fonts */
+}
+
+.profile-name {
+  font-size: 2rem;  /* Adjust font size for heading */
+  font-weight: bold;  /* Make profile name bolder */
+  margin-bottom: 0.5rem;  /* Add some space below the name */
+  color: #333;  /* Set a dark grey color */
+}
+
+.profile-disc {
+  font-size: 1.1rem;  /* Adjust font size for description */
+  line-height: 1.5;  /* Increase line spacing for readability */
+  color: #666;  /* Set a lighter grey color */
+}
+
+/* Optional: Choose a modern font (replace 'Inter' with your desired font) */
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/mon.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Apply modern font to profile name and description (if downloaded) */
+.profile-name,
+.profile-disc {
+  font-family: "Inter", sans-serif; /* Inter as primary, sans-serif as fallback */
+}

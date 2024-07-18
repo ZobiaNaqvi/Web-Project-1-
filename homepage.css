@@ -7,48 +7,6 @@ body {
 }
 
 
-.header {
-  display: flex; /* Makes header and navigation elements sit side-by-side */
-  justify-content: space-between; /* Spreads navigation links to the sides */
-  align-items: center; /* Aligns content vertically */
-  padding: 1rem 2rem; /* Adds padding for spacing */
-  background-color: #f0f0f0; /* Sets a light gray background */
-  font-family: "Montserrat", sans-serif; /* Primary font */
-}
-
-/* Fallback font for browsers that don't support "Montserrat" */
-@font-face {
-  font-family: "Montserrat";
-  src: url("fonts/Montserrat-Regular.woff2") format("woff2"),
-       url("fonts/Montserrat-Regular.woff") format("woff");
-}
-
-.header h1 {
-  font-size: 1.5rem; /* Adjusts heading font size */
-  margin: 0; /* Removes default margin */
-}
-
-.header nav ul {
-  list-style: none; /* Removes default list style (bullets) */
-  margin: 0; /* Removes default margin */
-  padding: 0; /* Removes default padding */
-}
-
-.header nav li {
-  display: inline-block; /* Makes list items behave like inline elements */
-  margin-right: 1rem; /* Adds margin between links */
-}
-
-.header nav a {
-  text-decoration: none; /* Removes underline from links */
-  color: #333; /* Sets link text color */
-  font-weight: bold; /* Makes links bolder */
-}
-
-.header nav a:hover {
-  color: #000; /* Changes link color on hover */
-}
-
 .boxcontainer {
   display: flex;
   justify-content: center;
